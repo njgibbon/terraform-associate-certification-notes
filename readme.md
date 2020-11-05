@@ -1,12 +1,12 @@
 # Terraform Associate Certification Notes
 Notes to help with the Terraform Associate Certification Exam
 
-# Important Links
+## Important Links
 * https://www.hashicorp.com/certification/terraform-associate
 * https://learn.hashicorp.com/tutorials/terraform/associate-review
 * https://learn.hashicorp.com/tutorials/terraform/associate-questions
 
-# Exam Objectives & Notes
+## Exam Objectives & Notes
 1. [Understand Infrastructure as Code (IaC) concepts](1-iac-concepts.md)
 2. [Understand Terraform's purpose (vs other IaC)](2-terraform-benefits.md)
 3. [Understand Terraform basics](3-terraform-basics.md)
@@ -17,7 +17,7 @@ Notes to help with the Terraform Associate Certification Exam
 8. [Read, generate, and modify configuration](8-terraform-config.md)
 9. [Understand Terraform Cloud and Enterprise capabilities](9-terraform-cloud.md)
 
-# Notes on the notes
+## Notes on the notes
 This repository is up to date as of November 2020.
 
 This repository holds all of the core notes I made while going through the exam objectives for revision. It doesn't include practical exercises and things like that. There are good practicals available through Hashicorp directly using the links above.
