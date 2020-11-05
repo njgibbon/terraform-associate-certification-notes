@@ -1,4 +1,5 @@
-# Understand Terraform's purpose (vs other IaC)
+# 2. Understand Terraform's purpose (vs other IaC)
+
 ## 2a. Explain multi-cloud and provider-agnostic benefits
 ### Multi-cloud benefits
 * Fault tolerance across providers.

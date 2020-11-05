@@ -1,4 +1,5 @@
-# Understand Infrastructure as Code (IaC) concepts
+# 1. Understand Infrastructure as Code (IaC) concepts
+
 ## 1a. Explain what IaC is
 High level DSL to provision infrastruture. Commited to source control. Shareable. Execution plan. Dependency graph.
 

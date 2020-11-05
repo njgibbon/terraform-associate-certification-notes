@@ -12,10 +12,10 @@ Notes to help with the Terraform Associate Certification Exam
 3. [Understand Terraform basics](3-terraform-basics.md)
 4. [Use the Terraform CLI (outside of core workflow)](4-terraform-cli.md)
 5. [Interact with Terraform modules](5-terraform-modules.md)
-6. [Navigate Terraform workflow](1-iac-concepts.md)
-7. [Implement and maintain state](1-iac-concepts.md)
-8. [Read, generate, and modify configuration](1-iac-concepts.md)
-9. [Understand Terraform Cloud and Enterprise capabilities](1-iac-concepts.md)
+6. [Navigate Terraform workflow](6-terraform-workflow.md)
+7. [Implement and maintain state](7-terraform-state.md)
+8. [Read, generate, and modify configuration](8-terraform-config.md)
+9. [Understand Terraform Cloud and Enterprise capabilities](9-terraform-cloud.md)
 
 # Notes on the notes
 This repository is up to date as of November 2020.

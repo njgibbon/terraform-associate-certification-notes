@@ -1,4 +1,5 @@
 # 3. Understand Terraform basics
+
 ## 3a. Handle Terraform and provider installation and versioning
 ### Install
 Lots of ways to install. Depending on Platform. Terraform is a single binary that needs to be accessible in the system and is named `terraform`. You can always choose to download specific versions.
