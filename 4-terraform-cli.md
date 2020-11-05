@@ -1,4 +1,5 @@
-# 4a. Given a scenario: choose when to use terraform fmt to format code
+# 4. Use the Terraform CLI (outside of core workflow)
+## 4a. Given a scenario: choose when to use terraform fmt to format code
 https://www.terraform.io/docs/commands/fmt.html
 ```
 terraform fmt [options] [DIR]
@@ -9,7 +10,7 @@ terraform fmt [options] [DIR]
 ```
 
 
-# 4b. Given a scenario: choose when to use terraform taint to taint Terraform resources
+## 4b. Given a scenario: choose when to use terraform taint to taint Terraform resources
 https://www.terraform.io/docs/commands/taint.html  
 A taint marks a resource as 'tainted' so it will be destroyed and recreated on the next apply.
 ```
@@ -19,14 +20,14 @@ terraform taint "module.route_tables.azurerm_route_table.rt[\"DefaultSubnet\"]"
 ```
 
 
-# 4c. Given a scenario: choose when to use terraform import to import existing infrastructure into your Terraform state
+## 4c. Given a scenario: choose when to use terraform import to import existing infrastructure into your Terraform state
 https://www.terraform.io/docs/commands/import.html
 ```
 terraform import [options] ADDRESS ID
 ```
 
 
-# 4d. Given a scenario: choose when to use terraform workspace to create workspaces
+## 4d. Given a scenario: choose when to use terraform workspace to create workspaces
 https://www.terraform.io/docs/state/workspaces.html  
 Backends can have multiple instances to store state called workspaces.
 ```
@@ -36,7 +37,7 @@ terraform workspace select default
 ```
 
 
-# 4e. Given a scenario: choose when to use terraform state to view Terraform state
+## 4e. Given a scenario: choose when to use terraform state to view Terraform state
 https://www.terraform.io/docs/commands/state/index.html
 All `terraform state` subcommands write a backup file. The location of this can be configured with `-backup`.
 ```
@@ -51,7 +52,7 @@ replace-provider # replaces provider
 rm # remove resources from state
 ```
 
-# 4f. Given a scenario: choose when to enable verbose logging and what the outcome/value is
+## 4f. Given a scenario: choose when to enable verbose logging and what the outcome/value is
 https://www.terraform.io/docs/internals/debugging.html
 ```
 export TF_LOG=TRACE|DEBUG|INFO|WARN|ERROR

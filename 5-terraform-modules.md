@@ -1,4 +1,6 @@
-# 5a. Contrast module source options
+# 5 Interact with Terraform modules
+
+## 5a. Contrast module source options
 ```
 # <NAMESPACE>/<NAME>/<PROVIDER>
 # source could also be a git repository or a relative path
@@ -8,7 +10,7 @@ module "consul" {
 }
 ```
 
-## Private registry
+### Private registry
 ```
 # <HOSTNAME>/<NAMESPACE>/<NAME>/<PROVIDER>
 module "vpc" {
@@ -19,8 +21,8 @@ module "vpc" {
 ```
 
 
-# 5b. Interact with module inputs and outputs
-## Module Inputs
+## 5b. Interact with module inputs and outputs
+### Module Inputs
 You can set them directly or define `variables.tf` (and optionally also `terraform.tfvars`).
 ```
 variable "vpc_cidr" {
@@ -41,7 +43,7 @@ variable "vpc_private_subnets" {
   default     = ["10.0.1.0/24", "10.0.2.0/24"]
 }
 ```
-## Module Outputs
+### Module Outputs
 ```
 output "vpc_public_subnets" {
   description = "IDs of the VPC's public subnets"
@@ -55,16 +57,16 @@ output "ec2_instance_public_ips" {
 ```
 
 
-# 5c. Describe variable scope within modules/child modules
+## 5c. Describe variable scope within modules/child modules
 Child module are passed in from the parents module in the same way variables can be passed in to the module its self. They really need to be thought of as completely independent and you are just using them through the interface defined by the child module. You similarily can use a child modules output variables in the same way you can use the parent modules as defined above.
 
-## Locals 
+### Locals 
 https://www.terraform.io/docs/configuration/locals.html  
 A local value assigns a name to an expression, so you can use it multiple times within a module without repeating it.
 
 
-# 5d. Discover modules from the public Terraform Module Registry
+## 5d. Discover modules from the public Terraform Module Registry
 Browse in the Terraform registry: https://registry.terraform.io/. Use as in **5a**.
 
-# 5e. Defining module version
+## 5e. Defining module version
 See **5a**.
