@@ -1,4 +1,4 @@
-# 5 Interact with Terraform modules
+# 5. Interact with Terraform modules
 
 ## 5a. Contrast module source options
 ```
