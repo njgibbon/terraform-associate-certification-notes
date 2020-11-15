@@ -101,6 +101,7 @@ https://www.terraform.io/docs/configuration/data-sources.html
 ## 8e. Use resource addressing and resource parameters to connect resources together
 * Resources: `resource_type.resource_name[resource index]`.
 * Modules: `module.module_name[module index]`.
+
 https://www.terraform.io/docs/internals/resource-addressing.html
 
 
