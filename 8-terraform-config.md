@@ -106,11 +106,66 @@ https://www.terraform.io/docs/internals/resource-addressing.html
 
 
 ## 8f. Use Terraform built-in functions to write configuration
-TODO
+https://www.terraform.io/docs/configuration/functions.html
+Lots of common functionality is available through built-in functions. Syntax for usage and a few examples can be seen below:
+```
+max(5, 12, 9)
+
+> join(", ", ["foo", "bar", "baz"])
+foo, bar, baz
+> join(", ", ["foo"])
+foo
+
+# file reads the contents of a file at the given path and returns them as a string.
+file(path)
+
+> timestamp()
+2018-05-13T07:44:12Z
+
+> base64sha256("hello world")
+uU0nuZNNPgilLlLX2n2r+sSE7+N6U4DukIj3rOLvzek=
+```
 
 
 ## 8g. Configure resource using a dynamic block
-TODO
+### Dynamic nested blocks
+* https://www.terraform.io/docs/configuration/expressions.html#dynamic-blocks
+* https://www.hashicorp.com/blog/hashicorp-terraform-0-12-preview-for-and-for-each
+```
+resource "aws_elastic_beanstalk_environment" "tfenvtest" {
+  name                = "tf-test-name"
+  application         = "${aws_elastic_beanstalk_application.tftest.name}"
+  solution_stack_name = "64bit Amazon Linux 2018.03 v2.11.4 running Go 1.12.6"
+
+  dynamic "setting" {
+    for_each = var.settings
+    content {
+      namespace = setting.value["namespace"]
+      name = setting.value["name"]
+      value = setting.value["value"]
+    }
+  }
+}
+```
+Only use when required because it makes configuration more confusing. So, only when you want to use data of a unknown length.
+
+### Resource loops
+https://www.terraform.io/docs/configuration/resources.html#for_each-multiple-resource-instances-defined-by-a-map-or-set-of-strings
+Use `count` if resources are almost identical. Use `for_each` if you need to template in different values using a map or set type var.
+```
+# Using Map
+resource "azurerm_resource_group" "rg" {
+  for_each = {
+    a_group = "eastus"
+    another_group = "westus2"
+  }
+  name     = each.key
+  location = each.value
+}
+```
+
+### Conditional Resouces
+`count = var.target_group_addition ? 1 : 0`
 
 
 ## 8h. Describe built-in dependency management (order of execution based)
